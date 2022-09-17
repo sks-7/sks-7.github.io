@@ -125,6 +125,11 @@ nav ul li a:hover::after {
   position: relative;
 }
 
+/* .tab-links:hover {
+  color: grey;
+  text-decoration: underline;
+} */
+
 .tab-links::after {
   content: '';
   width: 0;
@@ -220,8 +225,8 @@ nav ul li a:hover::after {
   font-size: 18px;
   line-height: 60px;
   background: #fff;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   text-align: center;
 }
@@ -237,7 +242,11 @@ nav ul li a:hover::after {
 /* ------------ contact -------------- */
 
 .contact-left {
-  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* flex-basis: 35%; */
+  /* border: 1px red solid; */
 }
 
 .contact-right {
@@ -245,6 +254,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left p {
+  text-align: left;
   margin-top: 30px;
 }
 
@@ -332,8 +342,53 @@ nav .fas {
 }
 
 @media only screen and (max-width: 600px) {
-  #header {
-    /* background-image: url(images/phone-background.jpeg); */
+  /* #header {
+    background-image: url(images/phone-background.jpeg);
+  } */
+
+  /* .layer {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .header-text p {
+    margin-right: 400px;
+  }
+
+  .layer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .layer h3,
+  p {
+    font-size: 10px;
+    text-align: center;
+    overflow: visible;
+  }
+
+  .layer div:nth-child(2) {
+    margin: auto;
+    /* margin-right: 20px; */
+  }
+
+  .layer a {
+    font-size: 10px;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .header-text {
@@ -411,4 +466,38 @@ nav .fas {
   color: #61b752;
   margin-top: -40px;
   display: block;
+}
+
+/* ------------------ tech stack -------- */
+
+#tech_stack_container {
+  height: auto;
+  width: 100%;
+  background-color: rgb(201, 196, 196);
+}
+#tech_stack_container h1 {
+  color: #080808;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.tech_feild {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech_feild div {
+  height: auto;
+  width: 300px;
+
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.tech_feild div img {
+  width: 100%;
+  height: 200px;
+  border-radius: 40px;
 }
