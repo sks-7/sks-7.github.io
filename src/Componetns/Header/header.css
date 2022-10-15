@@ -1,0 +1,139 @@
+header {
+    padding-top: 2.5rem;
+    overflow: hidden;
+}
+
+.header_container {
+    text-align: center;
+    position: relative;
+}
+
+
+.cta {
+    margin: 2rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.header_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header_socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.dynamic_text {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 2rem;
+    height: 1.9rem;
+}
+
+.dynamic_text li {
+    margin-bottom: 1rem 0rem;
+    position: relative;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    top: 0;
+    overflow: hidden;
+    animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -6rem;
+    }
+}
+
+.dynamic_text li span {
+    position: relative;
+}
+
+.dynamic_text li span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: #1d1d34;
+    border-left: 2px solid var(--color-primary);
+    animation: typing 3s steps(5) infinite;
+    transition: 1s;
+}
+
+@keyframes typing {
+    23% {
+        left: 50%;
+        margin: 0 -35px 0 0;
+    }
+
+    46% {
+        left: 100%;
+        margin: 0 0 0 35px;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    75% {
+        left: 50%;
+    }
+
+    100% {
+        left: 0%;
+        margin: 0 -35px 0 0;
+    }
+}
+
+.me {
+    background: transparent;
+    width: 23rem;
+    height: 23rem;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.me img {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+
+.scroll_down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 600px) {
+
+    .header_socials,
+    .scroll_down {
+        display: none;
+    }
+    .me{
+        /* margin-right: -90px; */
+        width: 310px;
+    }
+
+}

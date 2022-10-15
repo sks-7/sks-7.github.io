@@ -1,0 +1,11 @@
+.github_calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.github_calendar footer{
+    background: transparent;
+    padding: 1rem 0rem;
+    font-size: 0.9rem;
+}
