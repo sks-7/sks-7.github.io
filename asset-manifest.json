@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d7cb6686.css",
-    "main.js": "/static/js/main.a5509420.js",
+    "main.js": "/static/js/main.b7e26731.js",
     "static/media/work-1.png": "/static/media/work-1.96b5d07d5beeecb3e90b.png",
     "static/media/work-3.png": "/static/media/work-3.84d3e26b57ae31216685.png",
     "static/media/Sachin_Kumar_Resume.pdf": "/static/media/Sachin_Kumar_Resume.60d7321f67a7be2f75f2.pdf",
@@ -9,10 +9,10 @@
     "static/media/me_img.jpg": "/static/media/me_img.9ebe6ea3d6113a44f72d.jpg",
     "index.html": "/index.html",
     "main.d7cb6686.css.map": "/static/css/main.d7cb6686.css.map",
-    "main.a5509420.js.map": "/static/js/main.a5509420.js.map"
+    "main.b7e26731.js.map": "/static/js/main.b7e26731.js.map"
   },
   "entrypoints": [
     "static/css/main.d7cb6686.css",
-    "static/js/main.a5509420.js"
+    "static/js/main.b7e26731.js"
   ]
 }
