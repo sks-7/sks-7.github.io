@@ -1,12 +1,12 @@
-import React from 'react'
-import './about.css'
-import ME from "../../Assests/me_img.jpg"
-import {FaAward} from 'react-icons/fa'
-import {FiUsers} from 'react-icons/fi'
-import {VscFolderLibrary} from 'react-icons/vsc'
-import Aos from 'aos'
-import "aos/dist/aos.css"
-import { useEffect } from 'react'
+import React from 'react';
+import './about.css';
+import ME from '../../Assests/me_img.jpg';
+import { FaAward } from 'react-icons/fa';
+import { FiUsers } from 'react-icons/fi';
+import { VscFolderLibrary } from 'react-icons/vsc';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const About = () => {
   // useEffect(()=>{
@@ -50,7 +50,7 @@ const About = () => {
             eager to learn new technologies to enhance my skills and bring value
             to the organization. */}
             I am Sachin Kumar an enthusiastic, self-motivated and passionate
-            front-end <br /> and backend web developer with a specialization in MERN
+            front-end and backend web developer with a specialization in MERN
             stack. I am open to learn new technologies and skills. If you
             looking for a developer, I'd love to join your team. Please feel
             free to contact me.
@@ -62,6 +62,6 @@ const About = () => {
       </div>
     </section>
   );
-}
+};
 
-export default About
+export default About;
