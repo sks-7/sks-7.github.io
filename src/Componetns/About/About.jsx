@@ -42,13 +42,18 @@ const About = () => {
           </div>
 
           <p>
-            I have worked on several different projects collaboratively and
+            {/* I have worked on several different projects collaboratively and
             solely. I am a self-driven and passionate web developer skilled in
             JavaScript, React, and Redux and familiar with front-end frameworks
             like ChakraUI. Gone through 30 weeks of coding Bootcamp at Masai
             School.Also, worked on NodeJs, Express, MongoDB DataBase. Always
             eager to learn new technologies to enhance my skills and bring value
-            to the organization.
+            to the organization. */}
+            I am Sachin Kumar an enthusiastic, self-motivated and passionate
+            front-end <br /> and backend web developer with a specialization in MERN
+            stack. I am open to learn new technologies and skills. If you
+            looking for a developer, I'd love to join your team. Please feel
+            free to contact me.
           </p>
           <a href="#contact" className="btn btn_primary">
             Let's Talk
