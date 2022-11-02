@@ -100,7 +100,7 @@ const Protfolio = () => {
             American retail store chain that sells soaps, lotions, fragrances,
             and candles. It is a frontend project made using HTML, CSS, and
             vanilla JS that I made in collaboration with a team of 5. */}
-            This project is the clone of Bath & Body Works, LLC. It is an
+            Bath & Body Works, LLC. It is an
             American retail store chain that sells soaps, lotions, fragrances,
             and candles. A collaborative project built by a team of 4 executed
             in 5 days

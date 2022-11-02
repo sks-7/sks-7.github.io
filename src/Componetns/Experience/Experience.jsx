@@ -204,7 +204,7 @@ const Experience = () => {
               <div>
                 <div className="client_avtar icon_img">
                   <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                    src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
                     alt="avatar"
                   />
                 </div>
@@ -217,7 +217,7 @@ const Experience = () => {
               <div>
                 <div className="client_avtar icon_img">
                   <img
-                    src="https://media-exp1.licdn.com/dms/image/C560BAQG8HTJEoqPI4Q/company-logo_200_200/0/1625843974996?e=2147483647&v=beta&t=RQDR1wTqh58_gQHAek18bHIDmtRvg8G7lmYX0hL3tXU"
+                    src="https://cdn.iconscout.com/icon/free/png-256/netlify-3629537-3032320.png"
                     alt="avatar"
                   />
                 </div>
