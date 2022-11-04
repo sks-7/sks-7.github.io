@@ -128,7 +128,7 @@ const Protfolio = () => {
           <div className="portfolio_item_image">
             <img src={IMG4} alt="portfolio1" />
           </div>
-          <h3>Cloning Of JIO MART)</h3>
+          <h3>Cloning Of JIO MART</h3>
           <small className="portofolio_margin">
             Jiomart is a Online Grocery website where you can buy a wide range
             of fruits, vegetables, baby care products, personal care products
