@@ -3,8 +3,7 @@ import './protfolio.css';
 import IMG1 from '../../Assests/work-1.png';
 import IMG2 from '../../Assests/work-2.png';
 import IMG3 from '../../Assests/work-3.png';
-
-// import IMG4 from "../../Assests/three.jpeg"
+import IMG4 from '../../Assests/work-4.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -100,10 +99,9 @@ const Protfolio = () => {
             American retail store chain that sells soaps, lotions, fragrances,
             and candles. It is a frontend project made using HTML, CSS, and
             vanilla JS that I made in collaboration with a team of 5. */}
-            Bath & Body Works, LLC. It is an
-            American retail store chain that sells soaps, lotions, fragrances,
-            and candles. A collaborative project built by a team of 4 executed
-            in 5 days
+            Bath & Body Works, LLC. It is an American retail store chain that
+            sells soaps, lotions, fragrances, and candles. A collaborative
+            project built by a team of 4 executed in 5 days
           </small>
           <p className="bold">
             Tech stack : HTML | CSS | Javascript | LocalStorage
@@ -125,7 +123,35 @@ const Protfolio = () => {
             </a>
           </div>
         </article>
-       
+
+        <article className="portfolio_item">
+          <div className="portfolio_item_image">
+            <img src={IMG4} alt="portfolio1" />
+          </div>
+          <h3>Cloning Of JIO MART)</h3>
+          <small className="portofolio_margin">
+            Jiomart is a Online Grocery website where you can buy a wide range
+            of fruits, vegetables, baby care products, personal care products
+            and much more. this is solo project build in 5 days.
+          </small>
+          <p className="bold">Tech stack : react | chakra UI</p>
+          <div className="portfolio_item-cta">
+            <a
+              href="https://github.com/sks-7/MyfirstReact-Project"
+              className="btn"
+              target="_blank"
+            >
+              Github
+            </a>
+            <a
+              href="https://lambent-jalebi-9f992d.netlify.app/"
+              className="btn btn_primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </div>
+        </article>
       </div>
     </section>
   );
