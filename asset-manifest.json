@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.77244d8e.css",
-    "main.js": "/static/js/main.0187a0a6.js",
+    "main.css": "/static/css/main.219deae4.css",
+    "main.js": "/static/js/main.9db8d781.js",
     "static/media/work-4.png": "/static/media/work-4.acdc5eb3892cc866bb52.png",
     "static/media/work-1.png": "/static/media/work-1.96b5d07d5beeecb3e90b.png",
     "static/media/work-3.png": "/static/media/work-3.84d3e26b57ae31216685.png",
     "static/media/work-2.png": "/static/media/work-2.42baa2a3605a8a806fdf.png",
-    "static/media/Sachin_Kumar_Resume.pdf": "/static/media/Sachin_Kumar_Resume.4d0d3dad1df4f63a9667.pdf",
-    "static/media/me_img.jpg": "/static/media/me_img.ad74019a1c7f20e48b93.jpg",
+    "static/media/Sachin_Kumar_Resume.pdf": "/static/media/Sachin_Kumar_Resume.d73958b0f1b0f297f991.pdf",
+    "static/media/me_img.jpg": "/static/media/me_img.8758c4a813ae7663a65a.jpg",
     "index.html": "/index.html",
-    "main.77244d8e.css.map": "/static/css/main.77244d8e.css.map",
-    "main.0187a0a6.js.map": "/static/js/main.0187a0a6.js.map"
+    "main.219deae4.css.map": "/static/css/main.219deae4.css.map",
+    "main.9db8d781.js.map": "/static/js/main.9db8d781.js.map"
   },
   "entrypoints": [
-    "static/css/main.77244d8e.css",
-    "static/js/main.0187a0a6.js"
+    "static/css/main.219deae4.css",
+    "static/js/main.9db8d781.js"
   ]
 }
