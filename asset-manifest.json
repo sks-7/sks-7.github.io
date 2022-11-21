@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.219deae4.css",
-    "main.js": "/static/js/main.9db8d781.js",
+    "main.css": "/static/css/main.d4277272.css",
+    "main.js": "/static/js/main.dc0e05af.js",
     "static/media/work-4.png": "/static/media/work-4.acdc5eb3892cc866bb52.png",
     "static/media/work-1.png": "/static/media/work-1.96b5d07d5beeecb3e90b.png",
     "static/media/work-3.png": "/static/media/work-3.84d3e26b57ae31216685.png",
@@ -9,11 +9,11 @@
     "static/media/Sachin_Kumar_Resume.pdf": "/static/media/Sachin_Kumar_Resume.d73958b0f1b0f297f991.pdf",
     "static/media/me_img.jpg": "/static/media/me_img.8758c4a813ae7663a65a.jpg",
     "index.html": "/index.html",
-    "main.219deae4.css.map": "/static/css/main.219deae4.css.map",
-    "main.9db8d781.js.map": "/static/js/main.9db8d781.js.map"
+    "main.d4277272.css.map": "/static/css/main.d4277272.css.map",
+    "main.dc0e05af.js.map": "/static/js/main.dc0e05af.js.map"
   },
   "entrypoints": [
-    "static/css/main.219deae4.css",
-    "static/js/main.9db8d781.js"
+    "static/css/main.d4277272.css",
+    "static/js/main.dc0e05af.js"
   ]
 }
