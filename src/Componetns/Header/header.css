@@ -1,11 +1,14 @@
 header {
     padding-top: 2.5rem;
     overflow: hidden;
+     margin-top: 80px;
+   
 }
 
 .header_container {
     text-align: center;
     position: relative;
+    
 }
 
 

@@ -22,7 +22,7 @@ const Header = () => {
           </li>
         </ul>
         <CTA />
-        <HeaderSocial />
+        {/* <HeaderSocial /> */}
         <div className="me">
           <img
             src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"

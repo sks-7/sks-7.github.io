@@ -1,31 +1,98 @@
-nav{
-    background: rgba(0, 0, 0,0.3);
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg-variant);
+  padding: 20px 80px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  margin-bottom: 200px;
+}
+.dp {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: var(--color-primary);
+}
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: '';
+  width: 30%;
+  height: 2px;
+  background: var(--color-primary);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.resume_btn {
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+#mobile {
+  color: white;
+  display: none;
+}
+.rotate {
+  rotate: 180deg;
+}
+@media screen and (max-width: 769px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0.3rem;
-    display: flex;
-    gap: 0.8rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
-    /* top: 50%; */
-}
-nav a{
-    background: transparent;
-    padding:0.9rem;
-    border-radius: 50%;
-    display: flex;
-    color: var(--color-light);
-    font-size: 1rem;
-}
-nav a:hover{
-    background: rgba(0,0,0,0.3);
-}
-nav a.active{
-    background: var(--color-primary);
-    color: var(--color-bg);
+    top: 70px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--color-bg-variant);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #mobile {
+    color: white;
+    display: block;
+  }
+  .nav_icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
