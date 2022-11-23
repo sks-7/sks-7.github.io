@@ -128,23 +128,26 @@ const Protfolio = () => {
           <div className="portfolio_item_image">
             <img src={IMG4} alt="portfolio1" />
           </div>
-          <h3>Cloning Of JIO MART</h3>
+          <h3>CLOFETCH</h3>
           <small className="portofolio_margin">
-            Jiomart is a Online Grocery website where you can buy a wide range
-            of fruits, vegetables, baby care products, personal care products
-            and much more. this is solo project build in 5 days.
+            CLOFETCH is an e-commerce website that is expertly curated by the
+            best luxury fashion brands and boutiques around You can buy the best
+            ever branded clothes where you can buy men's, women and kids'
+            products.
           </small>
-          <p className="bold">Tech stack : react | chakra UI</p>
+          <p className="bold">
+            Tech stack : react | redux | chakra UI | Firebase | Json-Server
+          </p>
           <div className="portfolio_item-cta">
             <a
-              href="https://github.com/sks-7/MyfirstReact-Project"
+              href="https://github.com/sks-7/few-insect-4217/tree/main/farfetch"
               className="btn"
               target="_blank"
             >
               Github
             </a>
             <a
-              href="https://lambent-jalebi-9f992d.netlify.app/"
+              href="https://farfetch-8hthowlmt-masum-raja.vercel.app/"
               className="btn btn_primary"
               target="_blank"
             >
