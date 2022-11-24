@@ -74,10 +74,11 @@
 
    .about_me{
     width: 65%;
-    height:267px;
+    height:200px;
     margin: 0 auto 3rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary),transparent);
+    /* background: linear-gradient(45deg, transparent, var(--color-primary),transparent); */
    }
+   
    .about_cards{
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
