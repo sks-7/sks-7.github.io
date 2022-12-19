@@ -81,7 +81,7 @@ const Protfolio = () => {
               Github
             </a>
             <a
-              href="https://bright-sopapillas-48eab1.netlify.app/html/templates.html"
+              href="https://animoto-in.netlify.app/html/templates.html"
               className="btn btn_primary"
               target="_blank"
             >
