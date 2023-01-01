@@ -12,7 +12,7 @@ const data = [
     avatar:
       'https://d27028dliefpk3.cloudfront.net/assets/favicon/favicon-32x32.png',
     name: 'Masai School',
-    year: 'Feb 2022-Present',
+    year: 'Feb 2022-Dec 2022',
     review:
       'Masai is an outcome driven career school.It is Intensive and Immersive Program. In a duration of 40 weeks, I have 1200+ hours hands on coding , 100+ Hour on SoftSkills.',
   },
@@ -20,7 +20,7 @@ const data = [
     avatar:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUD1nFZH9vgk_IMcI2rgZhtNmG3r8UfZQVAA&usqp=CAU',
     name: 'H.D. JAIN COLLEGE, ARA',
-    year: ' Sep 2018 - sep 2021',
+    year: ' Sep 2018 - sep 2022',
     review: 'BSc (Mathematics) ',
   },
   {

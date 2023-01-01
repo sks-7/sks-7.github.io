@@ -23,12 +23,6 @@ const Protfolio = () => {
           </div>
           <h3>Cloning Of Clockify</h3>
           <small className="portofolio_margin">
-            {/* Clockify is one of the best Time tracking websites. On this website,
-            you can easily track your time and manage also. A group of five
-            people made this project during our construction week while we were
-            in unit five at Masai school. If you want you can fork our repo and
-            easily make this website and clone this beautiful website very
-            easily. */}
             Clockify is one of the best Time tracking websites. On this website,
             you can easily track your time and manage also. A collaborative
             project built by a team of 5 executed in 5 days.
@@ -46,7 +40,7 @@ const Protfolio = () => {
               Github
             </a>
             <a
-              href="https://clockifyy.netlify.app/"
+              href="https://clockify-one.vercel.app/"
               className="btn btn_primary"
               target="_blank"
             >
@@ -54,68 +48,31 @@ const Protfolio = () => {
             </a>
           </div>
         </article>
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG2} alt="portfolio1" />
-          </div>
-          <h3>Cloning Of ANIMOTO</h3>
-          <small className="portofolio_margin">
-            {/* Animoto is a cloud-based video creation service that produces video
-            from photos, video clips, and music into video slideshows, and
-            customized web-based presentations. */}
-            Animoto is a cloud-based video creation service that produces video
-            from photos, video clips, and music into video slideshows, and
-            customized web-based presentations. A collaborative project built by
-            a team of 5 executed in 5 days.
-          </small>
-          <p className="bold">
-            TechStack : HTML | CSS | JavaScript | jQuery | Fabric.JS | Node
-            Module | Local Storage
-          </p>
-          <div className="portfolio_item-cta">
-            <a
-              href="https://github.com/rohan209547mourya/deeply-tub-2367"
-              className="btn"
-              target="_blank"
-            >
-              Github
-            </a>
-            <a
-              href="https://animoto-in.netlify.app/html/templates.html"
-              className="btn btn_primary"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-          </div>
-        </article>
+
         <article className="portfolio_item">
           <div className="portfolio_item_image">
             <img src={IMG3} alt="portfolio1" />
           </div>
-          <h3>Cloning Of BATH & BODY WORKS</h3>
+          <h3>Cloning SkinStore</h3>
           <small className="portofolio_margin">
-            {/* This project is the clone of Bath & Body Works, LLC. It is an
-            American retail store chain that sells soaps, lotions, fragrances,
-            and candles. It is a frontend project made using HTML, CSS, and
-            vanilla JS that I made in collaboration with a team of 5. */}
-            Bath & Body Works, LLC. It is an American retail store chain that
-            sells soaps, lotions, fragrances, and candles. A collaborative
-            project built by a team of 4 executed in 5 days
+            SkinStore is an authorized retailer of 100s of premium beauty brands
+            across skin, makeup, and hair including SkinCeuticals. it is a solo
+            project built in 5 days.
           </small>
           <p className="bold">
-            Tech stack : HTML | CSS | Javascript | LocalStorage
+            Tech stack : ReactJs | ContexApi | Json-server | npm | vercel |
+            chakra-ui
           </p>
           <div className="portfolio_item-cta">
             <a
-              href="https://github.com/theagni0070/Project-Bath-BodyWorks"
+              href="https://github.com/sks-7/SkinStore"
               className="btn"
               target="_blank"
             >
               Github
             </a>
             <a
-              href="https://beautiful-cat-23c58b.netlify.app/"
+              href="https://supreme-honey-5251.vercel.app/"
               className="btn btn_primary"
               target="_blank"
             >
@@ -140,14 +97,47 @@ const Protfolio = () => {
           </p>
           <div className="portfolio_item-cta">
             <a
-              href="https://github.com/sks-7/few-insect-4217/tree/main/farfetch"
+              href="https://github.com/sks-7/Clofetch"
               className="btn"
               target="_blank"
             >
               Github
             </a>
             <a
-              href="https://farfetch-8hthowlmt-masum-raja.vercel.app/"
+              href="https://farfetch-henna.vercel.app/"
+              className="btn btn_primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </div>
+        </article>
+
+        <article className="portfolio_item">
+          <div className="portfolio_item_image">
+            <img src={IMG2} alt="portfolio1" />
+          </div>
+          <h3>Cloning Of ANIMOTO</h3>
+          <small className="portofolio_margin">
+            Animoto is a cloud-based video creation service that produces video
+            from photos, video clips, and music into video slideshows, and
+            customized web-based presentations. A collaborative project built by
+            a team of 5 executed in 5 days.
+          </small>
+          <p className="bold">
+            TechStack : HTML | CSS | JavaScript | jQuery | Fabric.JS | Node
+            Module | Local Storage
+          </p>
+          <div className="portfolio_item-cta">
+            <a
+              href="https://github.com/rohan209547mourya/deeply-tub-2367"
+              className="btn"
+              target="_blank"
+            >
+              Github
+            </a>
+            <a
+              href="https://animoto-in.netlify.app/html/templates.html"
               className="btn btn_primary"
               target="_blank"
             >
