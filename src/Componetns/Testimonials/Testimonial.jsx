@@ -20,7 +20,7 @@ const data = [
     avatar:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUD1nFZH9vgk_IMcI2rgZhtNmG3r8UfZQVAA&usqp=CAU',
     name: 'H.D. JAIN COLLEGE, ARA',
-    year: ' Sep 2018 - sep 2022',
+    year: ' Sep 2018 - sep 2021',
     review: 'BSc (Mathematics) ',
   },
   {

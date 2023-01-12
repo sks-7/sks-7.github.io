@@ -23,9 +23,10 @@ const Protfolio = () => {
           </div>
           <h3>Cloning Of Clockify</h3>
           <small className="portofolio_margin">
-            Clockify is one of the best Time tracking websites. On this website,
-            you can easily track your time and manage also. A collaborative
-            project built by a team of 5 executed in 5 days.
+            Clockify is a highly efficient time-tracking platform that enables
+            users to track and manage their time effectively. A collaborative
+            project, executed by a team of five, was successfully completed
+            within five days.
           </small>
           <p className="bold">
             TechStack : react | redux | nodejs | express | mongoDB | nodemon |
@@ -72,7 +73,7 @@ const Protfolio = () => {
               Github
             </a>
             <a
-              href="https://supreme-honey-5251.vercel.app/"
+              href="https://skinstore-two.vercel.app/"
               className="btn btn_primary"
               target="_blank"
             >
@@ -104,7 +105,7 @@ const Protfolio = () => {
               Github
             </a>
             <a
-              href="https://farfetch-henna.vercel.app/"
+              href="https://farfetch-hazel.vercel.app/"
               className="btn btn_primary"
               target="_blank"
             >
