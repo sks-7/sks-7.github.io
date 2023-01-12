@@ -40,7 +40,7 @@ const Protfolio = () => {
               Github
             </a>
             <a
-              href="https://clockify-one.vercel.app/"
+              href="https://clockify-eta.vercel.app/"
               className="btn btn_primary"
               target="_blank"
             >
