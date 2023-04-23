@@ -63,7 +63,7 @@ const About = () => {
       {/* --------------- new About section making -------------- */}
 
       <h5>Get to Know</h5>
-      <h2>About Me</h2>
+      <h2 className="about about section">About Me</h2>
       <div className="container about_container">
         <div className="about section">
           <p id="user-detail-intro">
