@@ -12,7 +12,7 @@ const Github = () => {
       </div>
       <div>
         <img
-          src="https://streak-stats.demolab.com/?user=sks-7&theme=dark"
+          src="https://github-readme-streak-stats.herokuapp.com/?user=sks-7&theme=dark"
           alt=""
           style={{ width: '400px', display: 'block', margin: 'auto' }}
           id="github-streak-stats"

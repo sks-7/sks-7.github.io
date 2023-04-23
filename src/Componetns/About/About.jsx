@@ -63,9 +63,10 @@ const About = () => {
       {/* --------------- new About section making -------------- */}
 
       <h5>Get to Know</h5>
-      <h2 className="about about section">About Me</h2>
+      <h2>About Me</h2>
       <div className="container about_container">
         <div className="about section">
+          <h2 className="about about section"></h2>
           <p id="user-detail-intro">
             Critical Thinker and an enthusiastic, self-motivated and passionate
             front-end and backend web developer with a specialization in MERN
