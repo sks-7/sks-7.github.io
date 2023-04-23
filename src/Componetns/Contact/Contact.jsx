@@ -3,6 +3,7 @@ import './contact.css'
 import { MdOutlineEmail } from 'react-icons/md'
 import { BsWhatsapp } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
+import {AiOutlineGithub} from "react-icons/ai"
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -26,17 +27,33 @@ const Contact = () => {
       <div className="container contact-container">
         <div className="contact_options">
           <article className="contact_option">
+            <AiOutlineGithub className="coi" />
+            <h4>My github</h4>
+
+            <a
+              id="contact-github"
+              href="https://github.com/sks-7"
+              target="_blank"
+            >
+             got to my Github
+            </a>
+          </article>
+          <article className="contact_option">
             <MdOutlineEmail className="coi" />
             <h4>Email</h4>
             <h5>sachinsingh.kumar07@gmail.com</h5>
-            <a href="mailto:sachinsingh.kumar07@gmail.com" target="_blank">
+            <a
+              id="contact-email"
+              href="mailto:sachinsingh.kumar07@gmail.com"
+              target="_blank"
+            >
               Send a message
             </a>
           </article>
           <article className="contact_option">
-            <BsWhatsapp className="coi" />
+            <BsWhatsapp className="coi" id="" />
             <h4>Whatsapp</h4>
-            <h5>{'+91'} 7667456574</h5>
+            <h5 id="contact-phone">{'+91'} 7667456574</h5>
             <a
               href="https://api.whatsapp.com/send?phone=7667456574"
               target="_blank"
@@ -51,6 +68,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/sachin-kumar-2a8a47231/"
               target="_blank"
+              id="contact-linkedin"
             >
               Send a message
             </a>
@@ -70,7 +88,7 @@ const Contact = () => {
             rows="7"
             required
           ></textarea>
-          <button type="submit" className="btn btn_primary">
+          <button type="submit" className="btn " id="resume-link-2">
             Send Message
           </button>
         </form>

@@ -94,10 +94,18 @@ a:hover {
   color: var(--color-white);
 }
 
-.btn {
+
+
+#resume-link-2 {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+#resume-link-2 {
   width: max-content;
   display: inline-block;
-  color: var(--color-primary);
+  /* color: var(--color-primary); */
+  color: black;
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
@@ -105,15 +113,10 @@ a:hover {
   transition: var(--transistion);
 }
 
-.btn:hover {
+#resume-link-2:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
-}
-
-.btn_primary {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
 }
 
 img {

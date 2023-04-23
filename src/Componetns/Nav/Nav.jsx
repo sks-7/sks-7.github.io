@@ -19,7 +19,7 @@ const Nav = () => {
   return (
     <div className="topnav">
       <nav>
-        <a href="#" className="dp">
+        <a href="#home" className="dp">
           <img
             style={{ width: '80px', borderRadius: '5px' }}
             src="https://i.pinimg.com/originals/53/f3/03/53f3032a69b961a583aae5952af5dace.jpg"
@@ -27,26 +27,40 @@ const Nav = () => {
           />
         </a>
         <div>
-          <ul id="navbar" className={activemenu ? '#navbar active' : '#navbar'}>
-            <li>
+          <ul
+            id="nav-menu"
+            className={activemenu ? '#nav-menu active' : '#nav-menu'}
+          >
+            <li className="nav-link home">
               <a
-                href="#"
-                onClick={() => handleHide('#')}
-                className={activenav === '#' ? 'active' : ''}
+                href="#home"
+                onClick={() => handleHide('#home')}
+                className={activenav === '#home' ? 'active' : ''}
               >
                 Home
               </a>
             </li>
-            <li>
+            <li className="nav-link about">
               <a
                 href="#about"
-                onClick={() => handleHide('#about')}
+                onClick={() => handleHide('#')}
                 className={activenav === '#about' ? 'active' : ''}
               >
                 About
               </a>
             </li>
-            <li>
+
+            <li className="nav-link skills">
+              <a
+                href="#skills"
+                onClick={() => handleHide('#skills')}
+                className={activenav === '#skills' ? 'active' : ''}
+              >
+                Skills
+              </a>
+            </li>
+
+            <li className="nav-link projects">
               <a
                 href="#projects"
                 onClick={() => handleHide('#projects')}
@@ -55,16 +69,7 @@ const Nav = () => {
                 Projects
               </a>
             </li>
-            <li>
-              <a
-                href="#skill"
-                onClick={() => handleHide('#skill')}
-                className={activenav === '#skill' ? 'active' : ''}
-              >
-                Skills
-              </a>
-            </li>
-            <li>
+            <li className="nav-link contact">
               <a
                 href="#contact"
                 onClick={() => handleHide('#contact')}
@@ -73,11 +78,11 @@ const Nav = () => {
                 Contact
               </a>
             </li>
-            <li>
+            <li className="nav-link resume">
               <a href={CV} download>
                 {' '}
                 <button
-                  className="resume_btn"
+                  id="resume-link-1"
                   onClick={() => {
                     window.open(CV);
                   }}

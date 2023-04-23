@@ -1,8 +1,8 @@
-import React from 'react'
-import './footer.css'
-import {BsLinkedin} from 'react-icons/bs'
-import {FaGithub} from 'react-icons/fa'
-import {FiDribbble} from 'react-icons/fi'
+import React from 'react';
+import './footer.css';
+import { BsLinkedin } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
+import { FiDribbble } from 'react-icons/fi';
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#skill">Skills</a>
+          <a href="#experience">Soft Skills</a>
         </li>
         <li>
           <a href="#projects">Projects</a>
@@ -50,6 +50,6 @@ const Footer = () => {
       </div> */}
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

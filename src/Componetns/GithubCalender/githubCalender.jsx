@@ -12,14 +12,22 @@ const Github = () => {
       </div>
       <div>
         <img
-          src="https://github-readme-stats.vercel.app/api?username=sks-7&show_icons=true&theme=dark&title_color=FDA117&text_color=F2E9DB"
-          alt=""
-          style={{ width: '400px', display: 'block', margin: 'auto' }}
-        />
-        <img
           src="https://streak-stats.demolab.com?user=sks-7&theme=dark"
           alt=""
           style={{ width: '400px', display: 'block', margin: 'auto' }}
+          id="github-streak-stats"
+        />
+        <img
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=sks-7&theme=dark"
+          alt=""
+          style={{ width: '400px', display: 'block', margin: 'auto' }}
+          id="github-top-langs"
+        />
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=sks-7&show_icons=true&theme=dark&title_color=FDA117&text_color=F2E9DB"
+          alt=""
+          style={{ width: '400px', display: 'block', margin: 'auto' }}
+          id="github-stats-card"
         />
       </div>
     </section>

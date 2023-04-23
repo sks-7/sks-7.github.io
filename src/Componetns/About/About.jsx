@@ -1,20 +1,25 @@
 import React from 'react';
 import './about.css';
-import ME from '../../Assests/me_img.png';
-import { FaAward } from 'react-icons/fa';
-import { FiUsers } from 'react-icons/fi';
-import { VscFolderLibrary } from 'react-icons/vsc';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+
+// -------------- old-----------
+// import ME from '../../Assests/me_img.png';
+// import { FaAward } from 'react-icons/fa';
+// import { FiUsers } from 'react-icons/fi';
+// import { VscFolderLibrary } from 'react-icons/vsc';
+// import Aos from 'aos';
+// import 'aos/dist/aos.css';
+// import { useEffect } from 'react';
+
+// ------------- old ----------------
+
+// ---- new import -----------
+
+// ---- new import -----------
 
 const About = () => {
-  // useEffect(()=>{
-  //   Aos.init({duration:1000})
-  // },[])
   return (
     <section id="about">
-      <h5>Get to Know</h5>
+      {/* <h5>Get to Know</h5>
       <h2>About Me</h2>
       <div className="container about_container">
         <div className="about_me">
@@ -42,13 +47,7 @@ const About = () => {
           </div>
 
           <p>
-            {/* I have worked on several different projects collaboratively and
-            solely. I am a self-driven and passionate web developer skilled in
-            JavaScript, React, and Redux and familiar with front-end frameworks
-            like ChakraUI. Gone through 30 weeks of coding Bootcamp at Masai
-            School.Also, worked on NodeJs, Express, MongoDB DataBase. Always
-            eager to learn new technologies to enhance my skills and bring value
-            to the organization. */}
+         
             I am Sachin Kumar an enthusiastic, self-motivated and passionate
             front-end and backend web developer with a specialization in MERN
             stack. I am open to learn new technologies and skills. If you
@@ -58,6 +57,36 @@ const About = () => {
           <a href="#contact" className="btn btn_primary">
             Let's Talk
           </a>
+        </div>
+      </div> */}
+
+      {/* --------------- new About section making -------------- */}
+
+      <h5>Get to Know</h5>
+      <h2>About Me</h2>
+      <div className="container about_container">
+        <div className="about section">
+          <p id="user-detail-intro">
+            Critical Thinker and an enthusiastic, self-motivated and passionate
+            front-end and backend web developer with a specialization in MERN
+            stack. I am open to learn new technologies and skills. If you
+            looking for a developer, I'd love to join your team. Please feel
+            free to contact me.
+          </p>
+        </div>
+      </div>
+      <div className="container experience_container about">
+        <div className="my_stats">
+          <div className="stats">1200+</div>
+          <p>Hours of Full Stack Coding</p>
+          <div className="stats">100+</div>
+          <p>Hours of Soft Skill Sessions</p>
+        </div>
+        <div className="my_stats">
+          <div className="stats">250+</div>
+          <p>DSA Problems</p>
+          <div className="stats">4+</div>
+          <p>Projects Done</p>
         </div>
       </div>
     </section>
