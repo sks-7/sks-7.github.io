@@ -1,5 +1,6 @@
 import React from 'react';
 import './about.css';
+import CV from '../../Assests/Sachin_Kumar_Resume.pdf';
 
 // -------------- old-----------
 // import ME from '../../Assests/me_img.png';
@@ -63,9 +64,9 @@ const About = () => {
       {/* --------------- new About section making -------------- */}
 
       <h5>Get to Know</h5>
-      <h2>About Me</h2>
       <div className="container about_container">
         <div className="about section" id="about">
+          <h2>About Me</h2>
           <h2 className="about about section"></h2>
           <p id="user-detail-intro">
             Critical Thinker and an enthusiastic, self-motivated and passionate
@@ -76,7 +77,12 @@ const About = () => {
             feel free to contact me.
           </p>
 
-          <button id="resume-button-2"></button>
+          <button
+            id="resume-button-2"
+            onClick={() => {
+              window.open(CV);
+            }}
+          ></button>
         </div>
       </div>
       <div className="container experience_container about">
