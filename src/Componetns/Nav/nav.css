@@ -56,6 +56,15 @@ nav {
   color: white;
   border: none;
 }
+
+#resume-button-1 {
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
 #mobile {
   color: white;
   display: none;

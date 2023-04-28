@@ -65,15 +65,18 @@ const About = () => {
       <h5>Get to Know</h5>
       <h2>About Me</h2>
       <div className="container about_container">
-        <div className="about section">
+        <div className="about section" id="about">
           <h2 className="about about section"></h2>
           <p id="user-detail-intro">
             Critical Thinker and an enthusiastic, self-motivated and passionate
             front-end and backend web developer with a specialization in MERN
-            stack. I am open to learn new technologies and skills. If you
-            looking for a developer, I'd love to join your team. Please feel
-            free to contact me.
+            stack proficient in tech Stacks like JavaScript, React Js, Node Js,
+            Redux and MongoDB. I am open to learn new technologies and skills.
+            If you looking for a developer, I'd love to join your team. Please
+            feel free to contact me.
           </p>
+
+          <button id="resume-button-2"></button>
         </div>
       </div>
       <div className="container experience_container about">

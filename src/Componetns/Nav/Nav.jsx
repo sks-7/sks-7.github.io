@@ -79,10 +79,10 @@ const Nav = () => {
               </a>
             </li>
             <li className="nav-link resume">
-              <a href={CV} download>
+              <a href={CV} download id="resume-link-1">
                 {' '}
                 <button
-                  id="resume-link-1"
+                  id="resume-button-1"
                   onClick={() => {
                     window.open(CV);
                   }}

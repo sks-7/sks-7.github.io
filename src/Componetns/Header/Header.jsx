@@ -69,6 +69,8 @@ const Header = () => {
           <a href={CV} id="resume-link-2" download>
             Resume
           </a>
+
+          <button id="resume-button-2"></button>
           <div className="header_socials">
             <a
               href="https://www.linkedin.com/in/sachin-kumar-2a8a47231/"
