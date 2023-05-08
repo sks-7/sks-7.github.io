@@ -77,7 +77,7 @@ const Header = () => {
             onClick={() => {
               const link = document.createElement('a');
               link.href = CV;
-              link.download = 'resume.pdf';
+              link.download = 'Sachin_Kumar_Resume.pdf';
               link.click();
             }}
           >
