@@ -12,6 +12,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FiDribbble } from 'react-icons/fi';
 import { IoMdMail } from 'react-icons/io';
 import { IoMdCloudDownload } from 'react-icons/io';
+import { AiOutlineCloudDownload } from 'react-icons/ai';
 const Header = () => {
   return (
     <header>
@@ -72,11 +73,15 @@ const Header = () => {
 
           <button
             id="resume-button-2"
+            className='btn-2'
             onClick={() => {
-              window.open(CV);
+              const link = document.createElement('a');
+              link.href = CV;
+              link.download = 'resume.pdf';
+              link.click();
             }}
           >
-            resume
+            Resume <AiOutlineCloudDownload />
           </button>
           <div className="header_socials">
             <a

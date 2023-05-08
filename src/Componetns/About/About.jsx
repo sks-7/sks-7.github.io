@@ -20,47 +20,6 @@ import CV from '../../Assests/Sachin_Kumar_Resume.pdf';
 const About = () => {
   return (
     <section id="about">
-      {/* <h5>Get to Know</h5>
-      <h2>About Me</h2>
-      <div className="container about_container">
-        <div className="about_me">
-          <div className="about_me_image">
-            <img src={ME} alt="" />
-          </div>
-        </div>
-        <div className="about_content">
-          <div className="about_cards">
-            <article className="about_card">
-              <FaAward className="about_icon" />
-              <h5>DSA</h5>
-              <small>250+ DSA Problems</small>
-            </article>
-            <article className="about_card">
-              <VscFolderLibrary className="about_icon" />
-              <h5>Projects</h5>
-              <small>4+ projects (Major)</small>
-            </article>
-            <article className="about_card">
-              <VscFolderLibrary className="about_icon" />
-              <h5>Coding</h5>
-              <small>1200+ Hours Of Coding</small>
-            </article>
-          </div>
-
-          <p>
-         
-            I am Sachin Kumar an enthusiastic, self-motivated and passionate
-            front-end and backend web developer with a specialization in MERN
-            stack. I am open to learn new technologies and skills. If you
-            looking for a developer, I'd love to join your team. Please feel
-            free to contact me.
-          </p>
-          <a href="#contact" className="btn btn_primary">
-            Let's Talk
-          </a>
-        </div>
-      </div> */}
-
       {/* --------------- new About section making -------------- */}
 
       <h5>Get to Know</h5>
