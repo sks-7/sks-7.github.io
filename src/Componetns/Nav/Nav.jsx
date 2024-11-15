@@ -3,7 +3,7 @@ import './nav.css';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { TbMedicalCross } from 'react-icons/tb';
-import CV from '../../Assests/Sachin_Kumar_Resume.pdf';
+import CV from '../../Assests/Sachin_Kumar-SDE.pdf';
 import { useState } from 'react';
 
 const Nav = () => {
