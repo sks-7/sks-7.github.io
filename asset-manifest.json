@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.6eda1fbe.css",
-    "main.js": "/static/js/main.ff832a75.js",
+    "main.css": "/static/css/main.3f732f88.css",
+    "main.js": "/static/js/main.85a8148c.js",
     "static/media/work-4.png": "/static/media/work-4.ab1b3cbba9b698bc5948.png",
     "static/media/work-3.png": "/static/media/work-3.70e0fd471620b3dc1baa.png",
     "static/media/work-1.png": "/static/media/work-1.96b5d07d5beeecb3e90b.png",
-    "static/media/me_img.png": "/static/media/me_img.eca26d4a66e52e9e45b0.png",
     "static/media/Sachin_Kumar_Resume.pdf": "/static/media/Sachin_Kumar_Resume.b2777c247a73b705b4fd.pdf",
     "static/media/work-2.png": "/static/media/work-2.42baa2a3605a8a806fdf.png",
+    "static/media/smart-drive-banner.jpg": "/static/media/smart-drive-banner.f4658786cdc85caf891e.jpg",
+    "static/media/me_img.jpg": "/static/media/me_img.3b1e72f03c0bdcacb907.jpg",
     "index.html": "/index.html",
-    "main.6eda1fbe.css.map": "/static/css/main.6eda1fbe.css.map",
-    "main.ff832a75.js.map": "/static/js/main.ff832a75.js.map"
+    "main.3f732f88.css.map": "/static/css/main.3f732f88.css.map",
+    "main.85a8148c.js.map": "/static/js/main.85a8148c.js.map"
   },
   "entrypoints": [
-    "static/css/main.6eda1fbe.css",
-    "static/js/main.ff832a75.js"
+    "static/css/main.3f732f88.css",
+    "static/js/main.85a8148c.js"
   ]
 }
