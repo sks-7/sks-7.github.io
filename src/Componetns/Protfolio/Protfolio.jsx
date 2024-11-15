@@ -73,14 +73,14 @@ const Protfolio = () => {
           </p>
           <div className="portfolio_item-cta">
             <a
-              href="https://github.com/Durgashankar001/clockify_clone"
+              href="https://github.com/sks-7/clockify_frontend"
               className="project-github-link"
               target="_blank"
             >
               Github
             </a>
             <a
-              href="https://clockify-eta.vercel.app/"
+              href="https://clockify-frontend.vercel.app/"
               className="project-deployed-link"
               target="_blank"
             >

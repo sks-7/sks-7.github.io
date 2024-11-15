@@ -6,7 +6,7 @@ import './header.css';
 import ME from '../../Assests/me_img.jpg';
 
 import Typewriter from 'typewriter-effect';
-import CV from '../../Assests/Sachin_Kumar_Resume.pdf';
+import CV from '../../Assests/Sachin_Kumar-SDE.pdf';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 import { FiDribbble } from 'react-icons/fi';
