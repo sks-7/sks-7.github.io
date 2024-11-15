@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f732f88.css",
-    "main.js": "/static/js/main.0aace919.js",
+    "main.js": "/static/js/main.a552a2f0.js",
     "static/media/work-4.png": "/static/media/work-4.ab1b3cbba9b698bc5948.png",
     "static/media/Sachin_Kumar-SDE.pdf": "/static/media/Sachin_Kumar-SDE.a5da8766e7e1b03ed149.pdf",
     "static/media/work-3.png": "/static/media/work-3.70e0fd471620b3dc1baa.png",
@@ -12,10 +12,10 @@
     "static/media/me_img.jpg": "/static/media/me_img.3b1e72f03c0bdcacb907.jpg",
     "index.html": "/index.html",
     "main.3f732f88.css.map": "/static/css/main.3f732f88.css.map",
-    "main.0aace919.js.map": "/static/js/main.0aace919.js.map"
+    "main.a552a2f0.js.map": "/static/js/main.a552a2f0.js.map"
   },
   "entrypoints": [
     "static/css/main.3f732f88.css",
-    "static/js/main.0aace919.js"
+    "static/js/main.a552a2f0.js"
   ]
 }
