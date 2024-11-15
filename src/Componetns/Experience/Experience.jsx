@@ -60,6 +60,36 @@ const Experience = () => {
                 {/* <small className='text_light'>Intermediate</small> */}
               </div>
             </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTesS2-HjTPHk96AEORqkIlhoqypQfHzYfLqw&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Typescript</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Tailwind CSS</h4>
+                {/* <small className='text_light'>Experienced</small> */}
+              </div>
+            </article>
             <article className="skills-card">
               {/* <BsPatchCheckFill className='experience_details_icon' /> */}
               <div>
@@ -80,12 +110,12 @@ const Experience = () => {
               <div>
                 <div className="client_avtar icon_img">
                   <img
-                    src="https://bootstrapmade.com/assets/img/logo-hero.png"
+                    src="https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9iYjEzYWViNTFjNTQ0MjFhN2E1NTQwYTcxMzI4OTVkYz9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.FnWJxluT5VvnfpnQsm2K2I1GK-k0_NAmWtu3G-u3fE0"
                     alt="avatar"
                     className="skills-card-img"
                   />
                 </div>
-                <h4 className="skills-card-name">Bootstrap</h4>
+                <h4 className="skills-card-name">Material Ui</h4>
                 {/* <small className='text_light'>Intermeiate</small> */}
               </div>
             </article>
@@ -100,6 +130,50 @@ const Experience = () => {
                   />
                 </div>
                 <h4 className="skills-card-name">React</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://assets.bacancytechnology.com/qanda/wp-content/uploads/2024/04/29061705/Download-File-in-AngularJS.png"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Angular</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZR8UuTA6qLa-MQhF91YToP1rBN7gP_taYFg&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Ionic</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Nextjs</h4>
                 {/* <small className='text_light'>Intermediate</small> */}
               </div>
             </article>
@@ -189,6 +263,96 @@ const Experience = () => {
                 {/* <small className='text_light'>Intermediate</small> */}
               </div>
             </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/golang.png"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Go Lang</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9keOIf7PMG2YaCig4VhGqR-wuGC7NUDUq5g&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Mysql</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH8kxkUW0hXJ5PzGb1XJQAS7GK0frdLjifMg&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">PostgreSQL</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMbuTCnPv7wAsOzmJ8x24tK7Wgbz6SfccUKQ&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Redis</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMwyF9jqTzoCr79rP7GKWu_ZYEpFl_5fhoQg&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Graphql</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://repository-images.githubusercontent.com/234231371/00fd8700-5430-11ea-820b-15fd85b2472c"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Go Fiber</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
           </div>
         </div>
         {/* ********* Tools ****************** */}
@@ -270,7 +434,7 @@ const Experience = () => {
               <div>
                 <div className="client_avtar icon_img">
                   <img
-                    src="https://res.cloudinary.com/crunchbase-production/image/upload/dtokjerhk1dxyludtlwc"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BLa_d1SN9EELEOi0Zy_S6MZbmRtqZpknxA&s"
                     alt="avatar"
                     className="skills-card-img"
                   />
@@ -285,7 +449,7 @@ const Experience = () => {
               <div>
                 <div className="client_avtar icon_img">
                   <img
-                    src="https://www.tomsquest.com/img/posts/2018-10-02-better-npm-ing/npm_logo.png"
+                    src="https://www.w3schools.com/whatis/img_npm.jpg"
                     alt="avatar"
                     className="skills-card-img"
                   />
@@ -321,6 +485,51 @@ const Experience = () => {
                   />
                 </div>
                 <h4 className="skills-card-name">Code Sand Box</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCAJH4R87uV3Rvncs3L3urjeNESAfJGTMTrA&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">Docker</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3s3eJpfGaV9Jk9m-fRxxF4HMnGkIxud04vg&s"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">jenkins</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
+
+            <article className="skills-card">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div>
+                <div className="client_avtar icon_img">
+                  <img
+                    src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png"
+                    alt="avatar"
+                    className="skills-card-img"
+                  />
+                </div>
+                <h4 className="skills-card-name">GitHub Pages</h4>
                 {/* <small className='text_light'>Intermediate</small> */}
               </div>
             </article>

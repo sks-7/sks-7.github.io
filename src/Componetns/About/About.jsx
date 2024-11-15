@@ -28,12 +28,17 @@ const About = () => {
           <h2>About Me</h2>
           <h2 className="about about section"></h2>
           <p id="user-detail-intro">
-            Critical Thinker and an enthusiastic, self-motivated and passionate
-            front-end and backend web developer with a specialization in MERN
-            stack proficient in tech Stacks like JavaScript, React Js, Node Js,
-            Redux and MongoDB. I am open to learn new technologies and skills.
-            If you looking for a developer, I'd love to join your team. Please
-            feel free to contact me.
+            I am a full-stack developer with 1.5 years of experience building
+            websites, web applications, and APIs. I specialize in the MERN stack
+            and have expertise in Node, Go, JavaScript, HTML, CSS, React, and
+            Angular. Outside of coding, my interests include playing cricket and
+            watching TV series. Some of the technical skills in which I am
+            proficient are: * Backend:- NodeJS, Golang, Express, Fiber
+            framework, MongoDB, SQL, NoSQL, MySQL, PostgreSQL, GraphQL, Redis *
+            Frontend:- JavaScript, HTML, CSS, React, Angular, Redux, Chakra UI,
+            Material UI * JavaScript and C++ for practicing Data Structures and
+            Algorithms (DSA) * Tools:- Docker, Jenkins, CI/CD, GitHub, Prisma
+            ORM and TablePlus.
           </p>
         </div>
       </div>
@@ -47,7 +52,7 @@ const About = () => {
         <div className="my_stats">
           <div className="stats">250+</div>
           <p>DSA Problems</p>
-          <div className="stats">4+</div>
+          <div className="stats">6+</div>
           <p>Projects Done</p>
         </div>
       </div>

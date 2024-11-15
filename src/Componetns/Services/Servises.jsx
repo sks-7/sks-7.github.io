@@ -82,6 +82,28 @@ const Services = () => {
                 {/* <small className='text_light'>Intermediate</small> */}
               </div>
             </article>
+
+            <article className="experince_details">
+              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
+              <div className="circle_three">
+                <div className="circle_main">
+                  <div className="percent">
+                    <div className="dot"></div>
+                    <svg>
+                      <circle cx="35" cy="35" r="35"></circle>
+                      <circle cx="35" cy="35" r="35"></circle>
+                    </svg>
+                    <div className="number_circle">
+                      <h2>
+                        60<span>%</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <h4>Typescript</h4>
+                {/* <small className='text_light'>Intermediate</small> */}
+              </div>
+            </article>
             <article className="experince_details">
               {/* <BsPatchCheckFill className='experience_details_icon' /> */}
               <div className="circle_four">
@@ -115,7 +137,7 @@ const Services = () => {
                     </svg>
                     <div className="number_circle">
                       <h2>
-                        75<span>%</span>
+                        80%<span>%</span>
                       </h2>
                     </div>
                   </div>
@@ -136,7 +158,7 @@ const Services = () => {
                     </svg>
                     <div className="number_circle">
                       <h2>
-                        80<span>%</span>
+                        90<span>%</span>
                       </h2>
                     </div>
                   </div>
