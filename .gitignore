@@ -1,23 +1,97 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# ---------------------------------------------------------------
+# Dependencies
+# ---------------------------------------------------------------
+node_modules/
+.pnp
 .pnp.js
+.yarn/
+.pnpm-store/
 
-# testing
-/coverage
-
-# production
+# ---------------------------------------------------------------
+# Build output (CI builds this; never commit it)
+# ---------------------------------------------------------------
 /build
+/dist
+dist-ssr/
+*.local
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# ---------------------------------------------------------------
+# Secrets & environment variables — NEVER commit these
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+id_ed25519*
+.npmrc
+.netrc
+secrets/
+credentials*.json
+service-account*.json
 
+# ---------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# ---------------------------------------------------------------
+# Caches & tooling output
+# ---------------------------------------------------------------
+coverage/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+.vite/
+.cache/
+vite.config.*.timestamp-*
+
+# ---------------------------------------------------------------
+# Editors & IDEs
+# ---------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# ---------------------------------------------------------------
+# OS files
+# ---------------------------------------------------------------
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------
+# Local scratch: screenshots, temp files, AI tool settings
+# ---------------------------------------------------------------
+*.tmp
+*.bak
+.claude/settings.local.json
+
+# ---------------------------------------------------------------
+# Private docs & loose images (kept local only)
+# doc/ holds personal setup notes (accounts, tokens) — never publish.
+# Images are ignored everywhere EXCEPT the site's own assets below.
+# ---------------------------------------------------------------
+/doc/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.heic
+!/src/Assests/**
+!/public/**
