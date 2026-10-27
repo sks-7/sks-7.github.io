@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { ArrowUpRight, Check, Copy, Download, Mail, Phone } from 'lucide-react';
+import { ArrowUpRight, Check, Copy, /* Download, TODO(Nov 2026) */ Mail, Phone } from 'lucide-react';
 import { profile } from '../data/profile';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { Container } from '../components/layout/Section';
@@ -47,10 +47,12 @@ export function Contact() {
                 )}
                 {state === 'copied' ? 'Copied!' : 'Copy email'}
               </Button>
+              {/* TODO(Nov 2026): uncomment resume button
               <ButtonLink href={profile.resume.href} download={profile.resume.downloadName} variant="ghost">
                 <Download aria-hidden="true" className="size-4" />
                 Resume
               </ButtonLink>
+              */}
             </div>
             <p role="status" aria-live="polite" className="mt-3 min-h-5 text-sm text-muted">
               {COPY_MESSAGES[state]}

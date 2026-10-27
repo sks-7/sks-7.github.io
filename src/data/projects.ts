@@ -5,29 +5,30 @@ import type { CaseStudy, Metric } from '../types/portfolio';
  * systems, so there is no public source code or live demo to link to.
  */
 export const caseStudies: CaseStudy[] = [
-  {
-    id: 'agentic-assistant',
-    title: 'Agentic Financial Assistant',
-    context: 'Atrina Technology · Client: 1 Finance',
-    problem:
-      'A financial assistant spanning **7 crypto exchanges**, where every number it returns has to match live data rather than an LLM guess.',
-    contribution: [
-      'Architected the agent in **Python** with **LangGraph** and **FastAPI**.',
-      'Built **10 JWT-secured tools** that call **Go** backend services over **httpx**, with strict output validation against live DB state.',
-      'Ported the core engine to **Node.js** with state checkpointing, per-user memory and **human-in-the-loop** approvals.',
-    ],
-    decisions: [
-      'A **5-stage validation pipeline**: a **20B** guardrail model filters malicious queries before a **120B** reasoning model executes tools.',
-      '**Deterministic validators** check results so the assistant returns **zero hallucinated numbers**.',
-      '**Windowed context buffering** keeps only the **last 6 turns** in context.',
-    ],
-    results: [
-      { value: '40%', label: 'lower LLM token consumption' },
-      { value: '73', label: 'pytest unit & integration tests' },
-      { value: '10', label: 'JWT-secured tools' },
-    ],
-    stack: ['Python', 'LangGraph', 'FastAPI', 'Pydantic', 'httpx', 'pytest', 'Go', 'Node.js'],
-  },
+  // TODO(Nov 2026): uncomment (Atrina role hidden for now)
+  // {
+  //   id: 'agentic-assistant',
+  //   title: 'Agentic Financial Assistant',
+  //   context: 'Atrina Technology · Client: 1 Finance',
+  //   problem:
+  //     'A financial assistant spanning **7 crypto exchanges**, where every number it returns has to match live data rather than an LLM guess.',
+  //   contribution: [
+  //     'Architected the agent in **Python** with **LangGraph** and **FastAPI**.',
+  //     'Built **10 JWT-secured tools** that call **Go** backend services over **httpx**, with strict output validation against live DB state.',
+  //     'Ported the core engine to **Node.js** with state checkpointing, per-user memory and **human-in-the-loop** approvals.',
+  //   ],
+  //   decisions: [
+  //     'A **5-stage validation pipeline**: a **20B** guardrail model filters malicious queries before a **120B** reasoning model executes tools.',
+  //     '**Deterministic validators** check results so the assistant returns **zero hallucinated numbers**.',
+  //     '**Windowed context buffering** keeps only the **last 6 turns** in context.',
+  //   ],
+  //   results: [
+  //     { value: '40%', label: 'lower LLM token consumption' },
+  //     { value: '73', label: 'pytest unit & integration tests' },
+  //     { value: '10', label: 'JWT-secured tools' },
+  //   ],
+  //   stack: ['Python', 'LangGraph', 'FastAPI', 'Pydantic', 'httpx', 'pytest', 'Go', 'Node.js'],
+  // },
   {
     id: 'trading-platform',
     title: 'Unlisted Equity Trading Backend',

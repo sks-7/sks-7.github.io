@@ -17,7 +17,8 @@ export function Experience() {
       id="experience"
       eyebrow="Experience"
       title="Where I've shipped."
-      lead="Three roles, from field operations to trading platforms to AI agents. Every number below is taken from my resume."
+      // TODO(Nov 2026): restore lead="Three roles, from field operations to trading platforms to AI agents. Every number below is taken from my resume."
+      lead="Two roles, from field operations to trading platforms. Every number below is taken from my resume."
     >
       <div className="relative">
         <span aria-hidden="true" className="absolute top-2 bottom-2 left-[7px] hidden w-px bg-gradient-to-b from-accent via-line-strong to-transparent md:block" />

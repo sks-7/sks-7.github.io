@@ -1,4 +1,4 @@
-import { ArrowRight, Download, MapPin } from 'lucide-react';
+import { ArrowRight, /* Download, TODO(Nov 2026) */ MapPin } from 'lucide-react';
 import { experience } from '../data/experience';
 import { headlineMetrics, profile } from '../data/profile';
 import { Container } from '../components/layout/Section';
@@ -54,10 +54,12 @@ export function Hero() {
               View projects
               <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-0.5" />
             </ButtonLink>
+            {/* TODO(Nov 2026): uncomment resume button
             <ButtonLink href={profile.resume.href} download={profile.resume.downloadName} variant="secondary">
               <Download aria-hidden="true" className="size-4" />
               Download resume
             </ButtonLink>
+            */}
           </div>
 
           <div className="animate-rise mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-muted" style={rise(5)}>

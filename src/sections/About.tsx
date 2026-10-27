@@ -48,8 +48,10 @@ export function About() {
           <Reveal delay={80}>
             <p className="mt-6 leading-relaxed text-muted">
               My work has moved from offline-first field operations at <span className="text-fg">Pivotroots</span>, to
-              trading and streaming systems at <span className="text-fg">Winsoft Technologies</span> for Choice Broking,
-              to LLM agents at <span className="text-fg">Atrina Technology</span> for 1 Finance. In each role, the
+              trading and streaming systems at <span className="text-fg">Winsoft Technologies</span> for Choice Broking.
+              {/* TODO(Nov 2026): uncomment and remove the period above
+              to LLM agents at <span className="text-fg">Atrina Technology</span> for 1 Finance. */}{' '}
+              In each role, the
               systems I worked on had to be both correct and fast.
             </p>
           </Reveal>
