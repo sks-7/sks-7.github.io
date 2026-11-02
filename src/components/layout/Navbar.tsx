@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { /* FileText, TODO(Nov 2026) */ Menu, X } from 'lucide-react';
+import { FileText, Menu, X } from 'lucide-react';
 import { profile } from '../../data/profile';
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { cn } from '../../lib/cn';
-// import { ButtonLink } from '../ui/Button'; // TODO(Nov 2026): uncomment with resume button
+import { ButtonLink } from '../ui/Button';
 import { Container } from './Section';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -90,7 +90,6 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          {/* TODO(Nov 2026): uncomment resume button
           <ButtonLink
             href={profile.resume.href}
             target="_blank"
@@ -101,7 +100,6 @@ export function Navbar() {
             <FileText aria-hidden="true" className="size-4" />
             Resume
           </ButtonLink>
-          */}
           <button
             ref={menuButton}
             type="button"
@@ -145,7 +143,6 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            {/* TODO(Nov 2026): uncomment resume button
             <ButtonLink
               href={profile.resume.href}
               target="_blank"
@@ -156,7 +153,6 @@ export function Navbar() {
               <FileText aria-hidden="true" className="size-4" />
               View resume
             </ButtonLink>
-            */}
           </Container>
         </nav>
       </div>
