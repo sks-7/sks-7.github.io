@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sachin Kumar — Senior Software Engineer</title>
+    <title>Sachin Kumar — AI Engineer & Backend Systems Developer</title>
     <meta
       name="description"
       content="Sachin Kumar is a Senior Software Engineer in Mumbai building high-concurrency distributed systems and agentic AI pipelines with Go, Python and Node.js."
@@ -11,12 +11,11 @@
     <meta name="author" content="Sachin Kumar" />
     <link rel="canonical" href="https://sks-7.github.io/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0a0b0f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#050508" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sks-7.github.io/" />
-    <meta property="og:title" content="Sachin Kumar — Senior Software Engineer" />
+    <meta property="og:title" content="Sachin Kumar — AI Engineer & Backend Systems Developer" />
     <meta
       property="og:description"
       content="Backend and agentic AI engineer: trading systems, streaming analytics and LLM agents in Go, Python and Node.js."
@@ -35,12 +34,8 @@
       (function () {
         try {
           var saved = localStorage.getItem('theme');
-          var theme =
-            saved === 'light' || saved === 'dark'
-              ? saved
-              : matchMedia('(prefers-color-scheme: light)').matches
-                ? 'light'
-                : 'dark';
+          // Dark-first design: dark unless the visitor picked light.
+          var theme = saved === 'light' ? 'light' : 'dark';
           document.documentElement.dataset.theme = theme;
         } catch (e) {
           document.documentElement.dataset.theme = 'dark';

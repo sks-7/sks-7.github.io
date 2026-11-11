@@ -1,17 +1,25 @@
-import { useId, useState } from 'react';
+import { useId, useRef, useState } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { experience } from '../data/experience';
 import type { Role } from '../types/portfolio';
 import { Section } from '../components/layout/Section';
 import { BadgeList } from '../components/ui/Badge';
+import { CountUp } from '../components/ui/CountUp';
 import { Reveal } from '../components/ui/Reveal';
 import { RichText } from '../components/ui/RichText';
 import { cn } from '../lib/cn';
+import { trackGlow } from '../lib/pointer';
 
 const VISIBLE_HIGHLIGHTS = 3;
 const VISIBLE_STACK = 8;
 
 export function Experience() {
+  const timeline = useRef<HTMLDivElement>(null);
+  // The timeline draws itself as the section scrolls through the viewport.
+  const { scrollYProgress } = useScroll({ target: timeline, offset: ['start 75%', 'end 60%'] });
+  const scaleY = useSpring(scrollYProgress, { stiffness: 120, damping: 26, restDelta: 0.001 });
+
   return (
     <Section
       id="experience"
@@ -19,8 +27,13 @@ export function Experience() {
       title="Where I've shipped."
       lead="Three roles, from field operations to trading platforms to AI agents. Every number below is taken from my resume."
     >
-      <div className="relative">
-        <span aria-hidden="true" className="absolute top-2 bottom-2 left-[7px] hidden w-px bg-gradient-to-b from-accent via-line-strong to-transparent md:block" />
+      <div ref={timeline} className="relative">
+        <span aria-hidden="true" className="absolute top-2 bottom-2 left-[7px] hidden w-px bg-line md:block" />
+        <motion.span
+          aria-hidden="true"
+          style={{ scaleY }}
+          className="absolute top-2 bottom-2 left-[7px] hidden w-px origin-top bg-gradient-to-b from-accent via-accent-2 to-metric shadow-[0_0_10px_var(--accent)] md:block"
+        />
         <ol className="space-y-6 sm:space-y-8">
         {experience.map((role, i) => (
           <Reveal as="li" key={role.id} delay={i * 60} className="relative md:pl-12">
@@ -28,7 +41,7 @@ export function Experience() {
               aria-hidden="true"
               className={cn(
                 'absolute top-7 left-0 hidden size-[15px] rounded-full border-2 border-bg md:block',
-                role.current ? 'bg-accent shadow-[0_0_0_4px_var(--accent-soft)]' : 'bg-line-strong',
+                role.current ? 'bg-accent shadow-[0_0_0_4px_var(--accent-soft),0_0_16px_var(--accent)]' : 'bg-line-strong',
               )}
             />
             <RoleCard role={role} />
@@ -48,7 +61,7 @@ function RoleCard({ role }: { role: Role }) {
   const hasMore = hiddenHighlights.length > 0 || hiddenStack > 0;
 
   return (
-    <article className="group rounded-3xl border border-line bg-surface p-5 shadow-card transition-colors hover:border-line-strong sm:p-8">
+    <article onPointerMove={trackGlow} className="glass glow-border group rounded-3xl p-5 sm:p-8">
       <header className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h3 className="text-xl font-semibold sm:text-2xl">{role.company}</h3>
@@ -68,8 +81,8 @@ function RoleCard({ role }: { role: Role }) {
 
       <ul className="mt-6 grid grid-cols-3 gap-2" aria-label="Key results">
         {role.metrics.map((metric) => (
-          <li key={metric.label} className="rounded-2xl border border-line bg-surface-2/60 px-3 py-3 sm:px-4">
-            <span className="block font-mono text-lg font-medium text-metric sm:text-xl">{metric.value}</span>
+          <li key={metric.label} className="rounded-2xl border border-line bg-bg/40 px-3 py-3 transition-colors group-hover:border-metric/30 sm:px-4">
+            <CountUp value={metric.value} className="block font-mono text-lg font-medium text-metric sm:text-xl" />
             <span className="block text-[0.7rem] leading-snug text-muted sm:text-xs">{metric.label}</span>
           </li>
         ))}

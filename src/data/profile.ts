@@ -6,6 +6,9 @@ export const profile: Profile = {
   location: 'Mumbai, Maharashtra, India',
   email: 'sachinsingh.kumar07@gmail.com',
   phone: '+91 7667456574',
+  headline: 'AI Engineer & Backend Systems Developer',
+  focusTags: ['AI Engineer', 'Distributed Systems', 'Backend Architecture'],
+  availability: 'Open to backend & AI engineering conversations',
   tagline: 'I build backends and AI agents that stay fast and correct under load.',
   intro:
     '3+ years designing and scaling high-concurrency distributed systems and agentic AI pipelines in Go, Python and Node.js, across trading platforms, streaming analytics and LLM agents.',

@@ -16,6 +16,12 @@ export interface Profile {
   email: string;
   phone: string;
   summary: string;
+  /** Recruiter-facing positioning line shown under the name in the hero. */
+  headline: string;
+  /** Short focus tags revealed one by one in the hero. */
+  focusTags: string[];
+  /** Shown in the hero terminal's JSON response. Edit freely. */
+  availability: string;
   tagline: string;
   intro: string;
   resume: {
@@ -44,8 +50,19 @@ export interface Role {
   stack: string[];
 }
 
+export type ProjectCategory = 'ai' | 'backend';
+
+/** One hop in a project's architecture diagram. `kind` picks colour and icon. */
+export interface PipelineStep {
+  label: string;
+  detail: string;
+  kind: 'client' | 'guard' | 'llm' | 'service' | 'queue' | 'store';
+}
+
 export interface CaseStudy {
   id: string;
+  category: ProjectCategory;
+  pipeline: PipelineStep[];
   title: string;
   context: string;
   problem: string;
@@ -57,7 +74,14 @@ export interface CaseStudy {
 
 export interface SkillGroup {
   title: string;
+  /** Which half of the skills matrix the group belongs to. */
+  domain: 'core' | 'ai' | 'backend';
   items: string[];
+}
+
+export interface FeaturedSkill {
+  name: string;
+  kind: 'lang' | 'ai' | 'backend' | 'data' | 'cloud';
 }
 
 export interface Principle {

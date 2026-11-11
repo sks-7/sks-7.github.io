@@ -104,12 +104,13 @@ export const experience: Role[] = [
       { value: '20%', label: 'shorter lead review cycles' },
     ],
     highlights: [
-      'Built an **offline-first** mobile-friendly web application using **SQLite** and an **asynchronous** sync queue, boosting field-agent operational efficiency by **40%**, backed by **20+ Go/Node.js REST** endpoints.',
+      'Built an **offline-first** mobile-friendly **React** web application using **SQLite** and an **asynchronous** sync queue, boosting field-agent operational efficiency by **40%**, backed by **20+ Go/Node.js REST** endpoints.',
       '**Automated** scheduled batch **notifications** and recurring jobs, reducing operational workload by **30%**, and created a role-based image validation pipeline reducing lead review cycles by **20%**.',
       'Deployed an **AI-powered OCR** and vision verification system for vehicle odometer and breathalyzer telemetry, decreasing manual data entry errors by **10%**.',
       'Decoupled heavy background compute workloads onto **RabbitMQ** queues to lower primary database contention by **10%**, using **GCP** Cloud Scheduler and **Google Maps APIs** for **live fleet tracking**.',
     ],
     stack: [
+      'React',
       'Go',
       'Node.js',
       'REST APIs',

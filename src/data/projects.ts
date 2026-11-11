@@ -7,6 +7,15 @@ import type { CaseStudy, Metric } from '../types/portfolio';
 export const caseStudies: CaseStudy[] = [
   {
     id: 'agentic-assistant',
+    category: 'ai',
+    pipeline: [
+      { label: 'User query', detail: 'Natural-language request from the 1 Finance app', kind: 'client' },
+      { label: 'Guardrail 20B', detail: 'A 20B guardrail model filters malicious queries first', kind: 'guard' },
+      { label: 'Reasoner 120B', detail: 'A 120B reasoning model plans and executes tool calls', kind: 'llm' },
+      { label: 'JWT tools', detail: '10 JWT-secured Python tools calling Go services over httpx', kind: 'service' },
+      { label: 'Validators', detail: 'Deterministic validators check every number against live DB state', kind: 'guard' },
+      { label: 'Response', detail: 'Answer with zero hallucinated numbers', kind: 'client' },
+    ],
     title: 'Agentic Financial Assistant',
     context: 'Atrina Technology · Client: 1 Finance',
     problem:
@@ -30,6 +39,15 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'trading-platform',
+    category: 'backend',
+    pipeline: [
+      { label: 'Client', detail: 'Order requests from the trading platform', kind: 'client' },
+      { label: 'Rate limiter', detail: 'In-memory token bucket: bursts without a Redis round-trip', kind: 'guard' },
+      { label: 'Gin API', detail: 'Go (Gin, GORM) services with goroutines, channels and sync.Mutex', kind: 'service' },
+      { label: 'Redis cache', detail: 'Targeted caching behind the 30% latency cut', kind: 'store' },
+      { label: 'Matching', detail: 'ACID-compliant order matching, placement and settlement', kind: 'service' },
+      { label: 'MS-SQL', detail: 'Transactional store for orders and settlement', kind: 'store' },
+    ],
     title: 'Unlisted Equity Trading Backend',
     context: 'Winsoft Technologies · Client: Choice Broking',
     problem:
@@ -48,6 +66,14 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'streaming-analytics',
+    category: 'backend',
+    pipeline: [
+      { label: 'Trade events', detail: 'Real-time trade data and notification triggers', kind: 'client' },
+      { label: 'Kafka / RMQ', detail: 'Millions of messages through Kafka and RabbitMQ', kind: 'queue' },
+      { label: 'Flink', detail: 'Apache Flink streams trade data in real time', kind: 'service' },
+      { label: 'StarRocks', detail: 'Columnar store for sub-second analytics', kind: 'store' },
+      { label: 'ClickHouse', detail: 'Columnar store for sub-second analytics', kind: 'store' },
+    ],
     title: 'Real-time Trade Streaming & Notifications',
     context: 'Winsoft Technologies · Client: Choice Broking',
     problem:
@@ -65,12 +91,21 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'field-ops',
+    category: 'backend',
+    pipeline: [
+      { label: 'React app', detail: 'Offline-first, mobile-friendly React web app for field agents', kind: 'client' },
+      { label: 'SQLite', detail: 'Local store keeps the app working offline', kind: 'store' },
+      { label: 'Sync queue', detail: 'Asynchronous queue syncs when connectivity returns', kind: 'queue' },
+      { label: 'REST API', detail: '20+ Go / Node.js REST endpoints', kind: 'service' },
+      { label: 'RabbitMQ', detail: 'Heavy background compute moved off the primary DB', kind: 'queue' },
+      { label: 'GCP + Maps', detail: 'Cloud Scheduler jobs and live fleet tracking', kind: 'service' },
+    ],
     title: 'Offline-first Field Operations',
     context: 'Pivotroots',
     problem:
       'Field agents needed a mobile-friendly app that keeps working **offline**, plus automated checks on vehicle telemetry and live fleet tracking.',
     contribution: [
-      'Built an **offline-first** web app on **SQLite** with an **asynchronous sync queue**, backed by **20+ Go/Node.js REST** endpoints.',
+      'Built an **offline-first** **React** web app on **SQLite** with an **asynchronous sync queue**, backed by **20+ Go/Node.js REST** endpoints.',
       'Deployed an **AI-powered OCR** and vision verification system for vehicle odometer and breathalyzer telemetry.',
       'Automated scheduled batch notifications and recurring jobs, plus a role-based image validation pipeline.',
     ],
@@ -85,7 +120,7 @@ export const caseStudies: CaseStudy[] = [
       { value: '10%', label: 'fewer data entry errors' },
       { value: '10%', label: 'less DB contention' },
     ],
-    stack: ['Go', 'Node.js', 'SQLite', 'RabbitMQ', 'GCP', 'Google Maps APIs'],
+    stack: ['React', 'Go', 'Node.js', 'SQLite', 'RabbitMQ', 'GCP', 'Google Maps APIs'],
   },
 ];
 

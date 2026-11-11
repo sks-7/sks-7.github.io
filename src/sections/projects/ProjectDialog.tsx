@@ -3,6 +3,7 @@ import { X } from 'lucide-react';
 import type { CaseStudy } from '../../types/portfolio';
 import { BadgeList } from '../../components/ui/Badge';
 import { RichText } from '../../components/ui/RichText';
+import { PipelineFlow } from './PipelineFlow';
 
 interface Props {
   study: CaseStudy | null;
@@ -39,7 +40,7 @@ export function ProjectDialog({ study, onClose }: Props) {
       }}
       // A click on the backdrop lands on the <dialog> element itself.
       onClick={(event) => event.target === event.currentTarget && ref.current?.close()}
-      className="project-dialog m-auto max-h-[min(88dvh,820px)] w-[min(100%-2rem,760px)] overflow-hidden rounded-3xl border border-line bg-surface p-0 text-fg shadow-2xl"
+      className="project-dialog m-auto max-h-[min(88dvh,820px)] w-[min(100%-2rem,760px)] overflow-hidden rounded-3xl border border-line bg-surface p-0 text-fg shadow-[0_0_80px_-30px_var(--accent)]"
     >
       {shown && (
         <div className="flex max-h-[inherit] flex-col">
@@ -66,6 +67,11 @@ export function ProjectDialog({ study, onClose }: Props) {
               <p className="leading-relaxed text-muted">
                 <RichText text={shown.problem} />
               </p>
+            </Block>
+            <Block title="Architecture">
+              <div className="rounded-2xl border border-line bg-surface-2/50 p-4">
+                <PipelineFlow steps={shown.pipeline} />
+              </div>
             </Block>
             <Block title="What I built">
               <List items={shown.contribution} />

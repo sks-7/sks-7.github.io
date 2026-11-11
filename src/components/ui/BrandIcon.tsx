@@ -12,7 +12,7 @@ const paths: Record<SocialLink['label'], string> = {
 
 export function BrandIcon({ name, className = 'size-4' }: { name: SocialLink['label']; className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={`shrink-0 ${className}`}>
       <path d={paths[name]} />
     </svg>
   );

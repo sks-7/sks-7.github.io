@@ -3,44 +3,52 @@
 /* `dark:` variant follows the data-theme attribute, not only the OS setting. */
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
+/* Only devices with a real hover pointer get hover-to-reveal UI. */
+@custom-variant can-hover (@media (hover: hover) and (pointer: fine));
+
 /* ---------- Design tokens (swapped per theme) ---------- */
 :root,
 [data-theme='light'] {
   color-scheme: light;
-  --bg: #f7f7f5;
+  --bg: #f6f7f9;
   --surface: #ffffff;
-  --surface-2: #f0f0ec;
-  --line: rgb(13 15 20 / 0.09);
-  --line-strong: rgb(13 15 20 / 0.16);
-  --fg: #0d0f14;
-  --muted: #4a5061;
-  --subtle: #6a7082;
-  --accent: #2f56e0;
+  --surface-2: #eef1f5;
+  --line: rgb(10 13 20 / 0.09);
+  --line-strong: rgb(10 13 20 / 0.17);
+  --fg: #0a0d14;
+  --muted: #475066;
+  --subtle: #64708a;
+  /* Cyan = AI / data flows, violet = LLM / neural, emerald = backend health. */
+  --accent: #0e7490;
   --accent-2: #7c3aed;
-  --accent-soft: rgb(47 86 224 / 0.09);
-  --metric: #3d7310;
-  --metric-soft: rgb(61 115 16 / 0.1);
-  --glow: rgb(47 86 224 / 0.12);
-  --shadow: 0 1px 2px rgb(13 15 20 / 0.04), 0 8px 24px -12px rgb(13 15 20 / 0.12);
+  --accent-soft: rgb(14 116 144 / 0.1);
+  --metric: #047857;
+  --metric-soft: rgb(4 120 87 / 0.1);
+  --glow: rgb(14 116 144 / 0.14);
+  --glow-2: rgb(124 58 237 / 0.12);
+  --glass: rgb(255 255 255 / 0.7);
+  --shadow: 0 1px 2px rgb(10 13 20 / 0.04), 0 8px 24px -12px rgb(10 13 20 / 0.14);
 }
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --bg: #0a0b0f;
-  --surface: #111318;
-  --surface-2: #171a21;
-  --line: rgb(255 255 255 / 0.07);
-  --line-strong: rgb(255 255 255 / 0.14);
-  --fg: #e9ebf1;
-  --muted: #b0b6c3;
-  --subtle: #868d9f;
-  --accent: #7c9cff;
-  --accent-2: #a78bfa;
-  --accent-soft: rgb(124 156 255 / 0.12);
-  --metric: #b6ef6a;
-  --metric-soft: rgb(182 239 106 / 0.1);
-  --glow: rgb(124 156 255 / 0.18);
-  --shadow: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 12px 32px -16px rgb(0 0 0 / 0.6);
+  --bg: #050508;
+  --surface: #0a0d14;
+  --surface-2: #10141e;
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.15);
+  --fg: #eef1f7;
+  --muted: #a9b1c2;
+  --subtle: #7d869a;
+  --accent: #00f0ff;
+  --accent-2: #8b5cf6;
+  --accent-soft: rgb(0 240 255 / 0.1);
+  --metric: #10b981;
+  --metric-soft: rgb(16 185 129 / 0.12);
+  --glow: rgb(0 240 255 / 0.16);
+  --glow-2: rgb(139 92 246 / 0.18);
+  --glass: rgb(10 13 20 / 0.6);
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 16px 40px -20px rgb(0 0 0 / 0.8);
 }
 
 @theme inline {
@@ -57,6 +65,7 @@
   --color-accent-soft: var(--accent-soft);
   --color-metric: var(--metric);
   --color-metric-soft: var(--metric-soft);
+  --color-glass: var(--glass);
   --shadow-card: var(--shadow);
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-display: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -116,7 +125,9 @@
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  background: linear-gradient(100deg, var(--accent), var(--accent-2), var(--metric), var(--accent));
+  background-size: 250% 100%;
+  animation: shimmer 9s linear infinite;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -128,15 +139,57 @@
   box-decoration-break: clone;
 }
 
+/* Glass card: translucent surface, thin luminous border, soft inner highlight. */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+}
+
+/* Cursor-following border glow; --mx/--my are set from JS on pointer move. */
+.glow-border {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 0%),
+    var(--accent),
+    var(--accent-2) 40%,
+    transparent 70%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.glow-border:hover::before,
+.glow-border:focus-within::before {
+  opacity: 1;
+}
+
 /* ---------- Motion ---------- */
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.35;
   }
-  to {
+  50% {
     opacity: 1;
-    transform: none;
   }
 }
 
@@ -144,29 +197,6 @@
   50% {
     opacity: 0;
   }
-}
-
-@keyframes flow {
-  to {
-    stroke-dashoffset: -24;
-  }
-}
-
-.animate-rise {
-  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
 }
 
 /* Theme switch: circular reveal driven from JS via the View Transitions API. */
@@ -216,11 +246,49 @@ dialog.project-dialog::backdrop {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
 
-  .reveal,
-  .animate-rise {
-    animation: none;
+/* A data packet that travels along a pipeline connector. */
+@keyframes travel {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  15%,
+  85% {
     opacity: 1;
-    transform: none;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Endless tech marquee (two copies of the row, shifted by one copy's width). */
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slow drift for gradient text. */
+@keyframes shimmer {
+  to {
+    background-position: 250% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*='animate-[marquee'] {
+    animation: none !important;
   }
 }

@@ -5,7 +5,10 @@ import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { Container } from '../components/layout/Section';
 import { BrandIcon } from '../components/ui/BrandIcon';
 import { Button, ButtonLink } from '../components/ui/Button';
+import { Magnetic } from '../components/ui/Magnetic';
 import { Reveal } from '../components/ui/Reveal';
+import { ScrambleText } from '../components/ui/ScrambleText';
+import { trackGlow } from '../lib/pointer';
 
 const COPY_MESSAGES = {
   idle: '',
@@ -19,13 +22,16 @@ export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-title" className="py-20 sm:py-28">
       <Container>
-        <Reveal className="relative overflow-hidden rounded-[2rem] border border-line bg-surface px-5 py-12 shadow-card sm:px-12 sm:py-16">
+        <Reveal onPointerMove={trackGlow} className="glass glow-border relative overflow-hidden rounded-[2rem] px-5 py-12 sm:px-12 sm:py-16">
           <div aria-hidden="true" className="bg-grid pointer-events-none absolute inset-0 opacity-70" />
           <div aria-hidden="true" className="pointer-events-none absolute -top-32 -right-24 size-80 rounded-full bg-[radial-gradient(closest-side,var(--glow),transparent)]" />
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 -left-24 size-96 rounded-full bg-[radial-gradient(closest-side,var(--glow-2),transparent)]" />
 
           <div className="relative grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-14">
             <div>
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.18em] text-accent">Contact</p>
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.18em] text-accent">
+              <ScrambleText text="Contact" />
+            </p>
             <h2 id="contact-title" className="text-3xl font-semibold sm:text-5xl">
               Let's talk about your <span className="text-gradient">next system.</span>
             </h2>
@@ -35,10 +41,12 @@ export function Contact() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ButtonLink href={`mailto:${profile.email}`}>
-                <Mail aria-hidden="true" className="size-4" />
-                Email me
-              </ButtonLink>
+              <Magnetic>
+                <ButtonLink href={`mailto:${profile.email}`}>
+                  <Mail aria-hidden="true" className="size-4" />
+                  Email me
+                </ButtonLink>
+              </Magnetic>
               <Button variant="secondary" onClick={() => copy(profile.email)}>
                 {state === 'copied' ? (
                   <Check aria-hidden="true" className="size-4 text-metric" />
@@ -47,10 +55,12 @@ export function Contact() {
                 )}
                 {state === 'copied' ? 'Copied!' : 'Copy email'}
               </Button>
-              <ButtonLink href={profile.resume.href} download={profile.resume.downloadName} variant="ghost">
-                <Download aria-hidden="true" className="size-4" />
-                Resume
-              </ButtonLink>
+              <Magnetic>
+                <ButtonLink href={profile.resume.href} download={profile.resume.downloadName} variant="ghost">
+                  <Download aria-hidden="true" className="size-4" />
+                  Download resume
+                </ButtonLink>
+              </Magnetic>
             </div>
             <p role="status" aria-live="polite" className="mt-3 min-h-5 text-sm text-muted">
               {COPY_MESSAGES[state]}
@@ -97,7 +107,7 @@ function ContactRow({ href, label, value, icon, external }: RowProps) {
       <a
         href={href}
         {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
-        className="group flex items-center gap-3 rounded-2xl border border-line bg-bg/60 px-4 py-3 transition-colors hover:border-accent"
+        className="group flex items-center gap-3 rounded-2xl border border-line bg-bg/50 px-4 py-3 transition-[border-color,box-shadow] hover:border-accent hover:shadow-[0_0_20px_-8px_var(--accent)]"
       >
         <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-surface-2 text-muted group-hover:text-accent">
           {icon}

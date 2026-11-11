@@ -8,7 +8,7 @@ export function Education() {
     <Section id="education" eyebrow="Education" title="Education & certifications.">
       <ul className="grid gap-4 md:grid-cols-2">
         {education.map((item, i) => (
-          <Reveal as="li" key={item.institution} delay={i * 60} className="flex gap-4 rounded-3xl border border-line bg-surface p-6">
+          <Reveal as="li" key={item.institution} delay={i * 60} className="glass flex gap-4 rounded-3xl p-6 transition-colors hover:border-accent/40">
             <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-accent-soft text-accent">
               <GraduationCap aria-hidden="true" className="size-5" />
             </span>

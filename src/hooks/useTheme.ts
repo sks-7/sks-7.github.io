@@ -1,19 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { flushSync } from 'react-dom';
 
 export type Theme = 'light' | 'dark';
 
 const STORAGE_KEY = 'theme';
-const THEME_COLORS: Record<Theme, string> = { light: '#f7f7f5', dark: '#0a0b0f' };
-
-function readSavedTheme(): Theme | null {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved === 'light' || saved === 'dark' ? saved : null;
-  } catch {
-    return null;
-  }
-}
+const THEME_COLORS: Record<Theme, string> = { light: '#f6f7f9', dark: '#050508' };
 
 function applyTheme(theme: Theme) {
   document.documentElement.dataset.theme = theme;
@@ -26,26 +17,13 @@ const prefersReducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
- * Light/dark theme. The initial value is set in index.html before first paint
- * (saved choice, else OS preference). Until the visitor picks a theme, the
- * site keeps following OS changes live.
+ * Light/dark theme. The design is dark-first: index.html applies dark before
+ * first paint unless the visitor previously picked light.
  */
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() =>
     document.documentElement.dataset.theme === 'light' ? 'light' : 'dark',
   );
-
-  useEffect(() => {
-    const query = window.matchMedia('(prefers-color-scheme: light)');
-    const onChange = (event: MediaQueryListEvent) => {
-      if (readSavedTheme()) return;
-      const next: Theme = event.matches ? 'light' : 'dark';
-      applyTheme(next);
-      setTheme(next);
-    };
-    query.addEventListener('change', onChange);
-    return () => query.removeEventListener('change', onChange);
-  }, []);
 
   /** Switches theme with a circular reveal expanding from the clicked control. */
   const toggleTheme = (origin?: { x: number; y: number }) => {

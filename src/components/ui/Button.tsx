@@ -5,13 +5,13 @@ type Variant = 'primary' | 'secondary' | 'ghost';
 type Size = 'md' | 'sm';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap transition-[background-color,border-color,color,transform,box-shadow] duration-200 active:scale-[0.98] disabled:opacity-60';
+  'inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap transition-[background-color,border-color,color,transform,box-shadow,filter] duration-200 active:scale-[0.98] disabled:opacity-60';
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-fg text-bg hover:bg-accent hover:text-white shadow-card dark:hover:text-bg',
+    'bg-accent text-bg font-semibold shadow-[0_0_28px_-8px_var(--accent)] hover:shadow-[0_0_36px_-4px_var(--accent)] hover:brightness-110',
   secondary:
-    'border border-line-strong bg-surface text-fg hover:border-accent hover:text-accent',
+    'border border-line-strong bg-glass text-fg backdrop-blur-md hover:border-accent hover:text-accent hover:shadow-[0_0_24px_-10px_var(--accent)]',
   ghost: 'text-muted hover:text-fg hover:bg-surface-2',
 };
 
