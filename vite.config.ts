@@ -9,6 +9,10 @@ const RESUME_SOURCE = fileURLToPath(
 );
 const RESUME_PUBLIC_NAME = 'Sachin_Kumar-SDE.pdf';
 
+// The hero terminal's JSON, served as a real endpoint so its curl command works.
+const API_SOURCE = fileURLToPath(new URL('./src/data/engineer.json', import.meta.url));
+const API_PUBLIC_PATH = 'api/engineer.json';
+
 /**
  * Serves the resume at a stable, un-hashed URL (/Sachin_Kumar-SDE.pdf) while
  * keeping src/Assests/Sachin_Kumar-SDE.pdf as the single file to update.
@@ -21,12 +25,21 @@ function resumePlugin(): Plugin {
         res.setHeader('Content-Type', 'application/pdf');
         res.end(readFileSync(RESUME_SOURCE));
       });
+      server.middlewares.use(`/${API_PUBLIC_PATH}`, (_req, res) => {
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.end(readFileSync(API_SOURCE));
+      });
     },
     generateBundle() {
       this.emitFile({
         type: 'asset',
         fileName: RESUME_PUBLIC_NAME,
         source: readFileSync(RESUME_SOURCE),
+      });
+      this.emitFile({
+        type: 'asset',
+        fileName: API_PUBLIC_PATH,
+        source: readFileSync(API_SOURCE),
       });
     },
   };

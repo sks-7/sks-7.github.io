@@ -47,7 +47,6 @@ export function StackScanner({ active }: { active: boolean }) {
       initial={{ opacity: 0, y: -16 }}
       animate={active ? { opacity: 1, y: 0 } : undefined}
       transition={{ ...spring, delay: 1.1 }}
-      style={{ z: 60 }}
       aria-hidden="true"
       className="glass absolute -top-7 left-1/2 w-[88%] -translate-x-1/2 overflow-hidden rounded-2xl"
     >
@@ -64,7 +63,7 @@ export function StackScanner({ active }: { active: boolean }) {
           <motion.span
             key={item.name}
             initial={{ y: 18, opacity: 0, filter: 'blur(6px)' }}
-            animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
+            animate={{ y: 0, opacity: 1, filter: 'blur(0px)', transitionEnd: { filter: 'none' } }}
             exit={{ y: -18, opacity: 0, filter: 'blur(6px)' }}
             transition={{ type: 'spring', stiffness: 260, damping: 22 }}
             className="flex min-w-0 flex-1 items-baseline justify-between gap-2"

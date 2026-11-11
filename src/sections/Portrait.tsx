@@ -44,7 +44,7 @@ export function Portrait() {
           px.set(0.5);
           py.set(0.5);
         }}
-        style={reduce ? undefined : { rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        style={reduce ? undefined : { rotateX, rotateY }}
         className="group relative"
       >
         {/* Rotating gradient ring: an oversized conic square spinning behind a 2px gap. */}
@@ -113,7 +113,6 @@ export function Portrait() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ ...spring, delay: 1.2 }}
-            style={{ z: 60 }}
             className="glass absolute -bottom-6 left-1/2 flex w-[88%] -translate-x-1/2 items-center gap-3 rounded-2xl px-4 py-3"
           >
             <span className="relative flex size-2.5 shrink-0" aria-hidden="true">

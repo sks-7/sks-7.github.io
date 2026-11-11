@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useInView, useReducedMotion } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
-import { experience } from '../../data/experience';
+import RESPONSE from '../../data/engineer.json';
 import { profile } from '../../data/profile';
 import { cn } from '../../lib/cn';
 import { trackGlow } from '../../lib/pointer';
@@ -10,26 +10,15 @@ type Kind = 'key' | 'str' | 'num' | 'punct';
 type Token = { kind: Kind; text: string };
 type Line = Token[];
 
-const COMMAND = 'curl -s localhost:8080/v1/engineers/sachin | jq';
+/**
+ * A real endpoint: the build publishes src/data/engineer.json at /api/engineer.json
+ * (see vite.config.ts), so the command works when copied. The origin is read at
+ * runtime: the live domain in production, the dev server locally.
+ */
+const ENDPOINT = `${window.location.origin}${import.meta.env.BASE_URL}api/engineer.json`;
+const COMMAND = `curl -s ${ENDPOINT} | jq`;
 const TYPE_MS = 26;
 const LINE_MS = 75;
-
-const current = experience.find((role) => role.current);
-
-/** Everything in the response comes from the portfolio data files. */
-const RESPONSE = {
-  name: profile.name,
-  role: profile.headline,
-  ...(current && { current: `${current.title} @ ${current.company}` }),
-  location: 'Mumbai, India',
-  experience_years: 3,
-  skills: {
-    ai: ['LangGraph', 'RAG', 'Tool Calling', 'Guardrails'],
-    backend: ['Go', 'Python', 'Node.js', 'Kafka', 'Redis'],
-  },
-  impact: ['30% lower API latency', '40% lower LLM token use', '5k–10k dispatches / day'],
-  availability: profile.availability,
-};
 
 const p = (text: string): Token => ({ kind: 'punct', text });
 

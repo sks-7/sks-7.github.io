@@ -1,0 +1,13 @@
+{
+  "name": "Sachin Kumar",
+  "role": "AI Engineer & Backend Systems Developer",
+  "current": "Senior Software Engineer @ Atrina Technology",
+  "location": "Mumbai, India",
+  "experience_years": 3,
+  "skills": {
+    "ai": ["LangGraph", "RAG", "Tool Calling", "Guardrails"],
+    "backend": ["Go", "Python", "Node.js", "Kafka", "Redis"]
+  },
+  "impact": ["30% lower API latency", "40% lower LLM token use", "5k–10k dispatches / day"],
+  "availability": "Open to backend & AI engineering conversations"
+}
